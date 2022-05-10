@@ -11,20 +11,19 @@ body {
   position: relative;
 }
 
+.cont-center {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.hidden {
+  display: none;
+}
+
 header {
   border-bottom: 1px solid #e5e5e5;
-}
-
-header button {
-  background-color: transparent;
-  border: none;
-  margin-right: 0.9em;
-}
-
-header button svg {
-  width: 1.5em;
-  height: 1.5em;
-  fill: #4a4a4a;
 }
 
 header > div {
@@ -34,6 +33,12 @@ header > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+header > div .buttons svg {
+  width: 1.7em;
+  height: 1.7em;
+  fill: #4a4a4a;
 }
 
 header > div > a {
@@ -143,15 +148,26 @@ footer > div > div a:not(:last-child) {
 .contact_us_form .inputs label {
   font-size: .7rem;
   color: #2a2a2a;
-  font-weight: bold;
-  margin-bottom: 1em;
 }
 
-.contact_us_form .inputs input {
+.contact_us_form .inputs textarea, .contact_us_form .inputs input[type="text"] {
   width: 100%;
   padding: .6em;
-  border-radius: 7px;
+  margin-top: .6em;
+  border-radius: 4px;
   border: 1px solid #cccccc;
+}
+
+.contact_us_form .inputs input[type="button"] {
+  width: 100%;
+  max-width: 250px;
+  padding: .7em;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  background-color: #2e2e2e;
+  color: whitesmoke;
 }
 
 .contact_us_form .inputs .top {
@@ -261,4 +277,469 @@ footer > div > div a:not(:last-child) {
 
 .cards_wrapper .book_card p {
   font-size: .8rem;
+}
+
+.approve {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.approve ul:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
+.approve ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .6em 0;
+}
+
+.approve ul li .left {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1em;
+}
+
+.approve ul li .left p {
+  font-size: .8rem;
+  color: #4a4a4a;
+}
+
+.approve ul li button {
+  background-color: green;
+  padding: .4em 2em;
+  border-radius: 4px;
+  color: aliceblue;
+  font-size: .9rem;
+  border: none;
+}
+
+.add_book {
+  padding: 2em 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.add_book form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.add_book form label {
+  font-size: .85rem;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.add_book form input[type="text"], .add_book form textarea {
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  padding: .6em;
+}
+
+.add_book form textarea {
+  height: 8em;
+}
+
+.add_book form input[type="submit"] {
+  background-color: #008521;
+  color: aliceblue;
+  font-size: .9rem;
+  border: none;
+  padding: .7em 0;
+  border-radius: .3em;
+  margin-top: 2em;
+}
+
+.add_book form .item_1 {
+  padding: 1em;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+.add_book form .item_1 div {
+  padding: .5em;
+  border: 1px dashed #f5ac26;
+  border-radius: 4px;
+}
+
+.add_book form .item_1 img {
+  width: 4em;
+}
+
+.add_book form .item_1 button {
+  margin-left: 2em;
+  padding: .9em 3em;
+  border-radius: 3px;
+  border: none;
+  background-color: #202020;
+  color: aliceblue;
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+.add_book form .item_2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.add_book form .item_3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.add_book form .item_4 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.add_book form .item_5 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.add_book form .item_6 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.add_book form .item_7 {
+  grid-area: 5 / 1 / 6 / 4;
+}
+
+.add_book form .item_8 {
+  grid-area: 6 / 1 / 7 / 2;
+}
+
+.add_book form .item_9 {
+  grid-area: 6 / 2 / 7 / 3;
+}
+
+.add_book form .item_10 {
+  grid-area: 6 / 3 / 7 / 4;
+}
+
+.add_book form .item_11 {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
+.add_book form .item_12 {
+  grid-area: 7 / 2 / 8 / 3;
+}
+
+.add_book form .item_13 {
+  grid-area: 7 / 3 / 8 / 4;
+}
+
+.add_book form .item_14 {
+  grid-area: 8 / 1 / 9 / 2;
+}
+
+.cart div {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr auto;
+}
+
+.cart ul {
+  margin-bottom: 2em;
+}
+
+.cart ul li:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
+.cart ul li {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr auto;
+  padding: .8em 0;
+  align-items: center;
+}
+
+.cart ul li button {
+  border: none;
+  background-color: transparent;
+  padding: 0 1em;
+}
+
+.cart ul li button svg {
+  width: 2em;
+  height: 2em;
+}
+
+.cart ul li img {
+  height: 5em;
+}
+
+.cart form {
+  background-color: #f8f8f8;
+  padding: 2em;
+  border-radius: 7px;
+}
+
+.cart form h1 {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #ededed;
+}
+
+.cart form div:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
+.cart form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .7em 0;
+}
+
+.cart form div p {
+  font-size: .8rem;
+}
+
+.cart form div p:nth-child(1) {
+  color: #a3a3a3;
+}
+
+.cart form input {
+  border: none;
+  border-radius: 4px;
+  margin-top: 2em;
+  padding: .8em 5em;
+  background-color: #23242b;
+  color: azure;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 1em 0;
+}
+
+.messages > div:first-child {
+  background-color: #e7e7e7;
+  padding: 1.5em;
+}
+
+.messages > div:first-child li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messages > div:first-child li a {
+  font-size: .9rem;
+  color: black;
+}
+
+.messages > div:first-child li p {
+  font-size: .8rem;
+  color: #2a2a2a;
+}
+
+.messages > div:last-child {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages > div:last-child .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  padding: .6em 1.5em;
+  background-color: #202020;
+}
+
+.messages > div:last-child .header h1 {
+  font-size: 1rem;
+  color: #4a4a4a;
+  color: #ebebeb;
+  font-weight: 400;
+}
+
+.messages > div:last-child .header p {
+  font-size: .8rem;
+  color: #ebebeb;
+}
+
+.messages > div:last-child .body {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages > div:last-child .body .chats {
+  flex: 1;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages > div:last-child .body .chats > div:not(:last-child) {
+  margin-bottom: .8em;
+}
+
+.messages > div:last-child .body .chats > div:nth-child(odd) {
+  background-color: #b9f7a2;
+  align-self: flex-start;
+}
+
+.messages > div:last-child .body .chats > div:nth-child(even) {
+  align-self: flex-end;
+  background-color: #d5effb;
+}
+
+.messages > div:last-child .body .chats > div {
+  padding: .6em;
+  border-radius: 7px;
+  width: 70%;
+}
+
+.messages > div:last-child .body .chats > div p {
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.messages > div:last-child .body .input {
+  background-color: #e7e7e7;
+  padding: .5em;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr auto;
+}
+
+.messages > div:last-child .body .input input[type="text"] {
+  padding: .6em;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #bfbfbf;
+}
+
+.messages > div:last-child .body .input input[type="submit"] {
+  padding: .5em 2em;
+  border: none;
+  border-radius: 6px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.messages li {
+  list-style: none;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.product img {
+  width: 100%;
+  height: 60vh;
+}
+
+.product div:nth-child(2) {
+  padding: 1.5em;
+}
+
+.product div:nth-child(2) h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.product div:nth-child(2) h2 {
+  font-size: .9rem;
+  font-weight: 300;
+  margin: .8em 0;
+}
+
+.product div:nth-child(2) > p {
+  font-size: .9rem;
+  color: #3b3b3b;
+}
+
+.product div:nth-child(2) .tags {
+  display: grid;
+  gap: .5em;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2em;
+  border-top: 1px solid #ededed;
+  padding: 1em 0;
+}
+
+.product div:nth-child(2) .tags p:nth-child(odd) {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.product div:nth-child(2) .tags p:nth-child(even) {
+  color: gray;
+}
+
+.product div:nth-child(2) .tags p {
+  color: #4a4a4a;
+  font-size: .8rem;
+}
+
+.product div:nth-child(2) .buttons {
+  padding: 1em 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .5em;
+}
+
+.product div:nth-child(2) .buttons button {
+  padding: .6em 3em;
+  border-radius: 2px;
+  font-size: .8rem;
+  border: none;
+  background-color: #282828;
+  color: whitesmoke;
+}
+
+.trackorder form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+}
+
+.trackorder form h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: .7em;
+}
+
+.trackorder form p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.trackorder form input[type="text"] {
+  width: 100%;
+  padding: .8em 0;
+  margin: 1em 0;
+  border: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.trackorder form input[type="submit"] {
+  width: 100%;
+  padding: .8em;
+  border-radius: 3px;
+  background-color: #131313;
+  color: whitesmoke;
+  font-size: 1rem;
 }
