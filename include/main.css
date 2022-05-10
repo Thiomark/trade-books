@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  margin-right: 0.9em;
+}
+
+header button svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #4a4a4a;
+}
+
+header > div {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > div > a {
+  font-size: 1.6rem;
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+header > div div {
+  display: flex;
+  align-items: center;
+  padding: .6em;
+}
+
+header > div div div {
+  border: 1px solid #c9c9c9;
+  border-radius: 6px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  padding: 0 .6em;
+  margin-right: 0.9em;
+}
+
+header > div div div input {
+  width: 100%;
+  border: none;
+  padding: .6em 0;
+  margin-right: 1em;
+}
+
+header > div div div input:focus {
+  outline: none;
+}
+
+header > div div div button {
+  border: none;
+  background-color: transparent;
+}
+
+header > div div a {
+  font-size: .8rem;
+  margin-right: .9em;
+  color: #4a4a4a;
+}
+
+footer {
+  background-color: #1c1c1d;
+  padding: .6em 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer > div > a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+footer > div > div {
+  display: flex;
+}
+
+footer > div > div a {
+  font-size: .8rem;
+  color: aliceblue;
+}
+
+footer > div > div a:not(:last-child) {
+  margin-right: 0.9em;
+}
+
+.contact_us_form {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.contact_us_form h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact_us_form > p {
+  text-align: center;
+  margin-bottom: 1.6em;
+  font-size: .9rem;
+  color: #5d5d5d;
+}
+
+.contact_us_form .inputs {
+  padding: 2em 0;
+}
+
+.contact_us_form .inputs label {
+  font-size: .7rem;
+  color: #2a2a2a;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.contact_us_form .inputs input {
+  width: 100%;
+  padding: .6em;
+  border-radius: 7px;
+  border: 1px solid #cccccc;
+}
+
+.contact_us_form .inputs .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 1em;
+}
+
+.contact_us_form .contact_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 2em;
+}
+
+.contact_us_form .contact_info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_us_form .contact_info > div svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #4a4a4a;
+}
+
+.contact_us_form .contact_info > div p {
+  margin-top: .8em;
+  color: #4a4a4a;
+}
+
+.auth_form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.auth_form h1 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.auth_form input {
+  width: 100%;
+}
+
+.auth_form input[type="text"], .auth_form input[type="password"] {
+  padding: .8em;
+  border-radius: 6px;
+  margin-bottom: .8em;
+  border: 1px solid #d6d6d6;
+}
+
+.auth_form > div {
+  background-color: #eeeeee;
+  padding: .6em;
+  border-radius: .3em;
+}
+
+.auth_form > div p {
+  text-align: center;
+  font-size: .850rem;
+}
+
+.auth_form input[type="submit"] {
+  padding: .9em;
+  font-size: .780rem;
+  background-color: #272727;
+  color: #d5d5d5;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 4px;
+  margin-top: .9em;
+}
+
+.cards_wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 2em 0;
+}
+
+.cards_wrapper .book_card {
+  cursor: pointer;
+}
+
+.cards_wrapper .book_card h1 {
+  font-size: 1rem;
+}
+
+.cards_wrapper .book_card img {
+  width: 15em;
+  border: 1px dashed #eeeeee;
+  padding: .6em;
+  border-radius: 7px;
+  border-radius: .6px;
+  margin-bottom: .7em;
+}
+
+.cards_wrapper .book_card p {
+  font-size: .8rem;
+}
