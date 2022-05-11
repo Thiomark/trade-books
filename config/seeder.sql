@@ -11,6 +11,4 @@ CREATE TABLE `bookstore`.`tblUser` (
 
 
 
-
-
-INSERT INTO `tblUser` (`user_id`, `username`, `name`, `password`, `role`, `created_on`, `is_approved`) VALUES (NULL, 'admin', 'admin', 'admin123', 'admin', CURRENT_TIMESTAMP, '1');
+INSERT INTO `tblUser` (`user_id`, `username`, `password`, `role`, `created_on`, `student_number`, `is_approved`, `name`) VALUES (NULL, 'admin', 'admin123', 'student', CURRENT_TIMESTAMP, '1012', '1', 'admin');
