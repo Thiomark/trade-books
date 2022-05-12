@@ -1,21 +1,29 @@
 <?php include './include/header.php'; ?>
+    <?php
+        $id = (int) $_GET["id"];
+
+        $sql = "SELECT * FROM tblBook WHERE book_id = $id;";
+        $result = mysqli_query($conn, $sql);
+        $book = mysqli_fetch_assoc($result);
+
+    ?>
     <main class="cont-center product">
         <div>
             <img src="https://images.pexels.com/photos/5981927/pexels-photo-5981927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" srcset="">
         </div>
         <div>
-            <h1>Lorem, ipsum dolor.</h1>
-            <h2>R 200.00</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate odit iste error, quae maiores expedita totam, blanditiis odio officiis doloribus quo culpa nostrum necessitatibus soluta est inventore quisquam porro amet!</p>
+            <h1><?php echo $book['title']; ?></h1>
+            <h2>R <?php echo $book['price']; ?></h2>
+            <p><?php echo $book['description']; ?></p>
             <div class="buttons">
                 <button>add to cart</button>
                 <button>message privately</button>
             </div>
             <div class="tags">
                 <p>isnb</p>
-                <p>11222345535353</p>
+                <p><?php echo $book['isbn']; ?></p>
                 <p>categories</p>
-                <p>Lorem, ipsum</p>
+                <p><?php echo $book['category']; ?></p>
             </div>
         </div>        
     </main>

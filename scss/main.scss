@@ -260,9 +260,11 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2em 0;
     .book_card {
-        cursor: pointer;
-        h1 {
+        text-decoration: none;
+        color: black;
+        a {
             font-size: 1rem;
+            text-decoration: underline;
         }
         img {
             width: 15em;
@@ -284,6 +286,14 @@ footer {
     padding: 2em 0;
     ul:not(:last-child){
         border-bottom: 1px solid rgb(237, 237, 237);
+    }
+    .message {
+        border: 1px solid $light-border;
+        border-radius: 7px;
+        padding: 1em;
+        p {
+            text-align: center;
+        }
     }
     ul {
         li {
@@ -701,5 +711,29 @@ footer {
             color: whitesmoke;
             font-size: 1rem;
         }
+    }
+}
+
+.error {
+    border-radius: 7px;
+    padding: .4em;
+    border: 1px solid $light-border;
+    margin: .4em;
+    p {
+        text-align: center;
+        font-size: .8rem;
+        color: red;
+    }
+}
+
+.success {
+    border-radius: 7px;
+    padding: .4em;
+    border: 1px solid $light-border;
+    margin: .4em;
+    p {
+        text-align: center;
+        font-size: .8rem;
+        color: green;
     }
 }

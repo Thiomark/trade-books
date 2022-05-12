@@ -259,11 +259,13 @@ footer > div > div a:not(:last-child) {
 }
 
 .cards_wrapper .book_card {
-  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
-.cards_wrapper .book_card h1 {
+.cards_wrapper .book_card a {
   font-size: 1rem;
+  text-decoration: underline;
 }
 
 .cards_wrapper .book_card img {
@@ -288,6 +290,16 @@ footer > div > div a:not(:last-child) {
 
 .approve ul:not(:last-child) {
   border-bottom: 1px solid #ededed;
+}
+
+.approve .message {
+  border: 1px solid #ededed;
+  border-radius: 7px;
+  padding: 1em;
+}
+
+.approve .message p {
+  text-align: center;
 }
 
 .approve ul li {
@@ -742,4 +754,30 @@ footer > div > div a:not(:last-child) {
   background-color: #131313;
   color: whitesmoke;
   font-size: 1rem;
+}
+
+.error {
+  border-radius: 7px;
+  padding: .4em;
+  border: 1px solid #ededed;
+  margin: .4em;
+}
+
+.error p {
+  text-align: center;
+  font-size: .8rem;
+  color: red;
+}
+
+.success {
+  border-radius: 7px;
+  padding: .4em;
+  border: 1px solid #ededed;
+  margin: .4em;
+}
+
+.success p {
+  text-align: center;
+  font-size: .8rem;
+  color: green;
 }
