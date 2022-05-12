@@ -1,3 +1,13 @@
+<?php
+    if (isset($_POST['addToCart'])) {
+        $id = filter_input(INPUT_POST, 'book_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+
+
+        header("Location: product.php?id=$id");
+        exit();
+    }
+?>
 <?php include './include/header.php'; ?>
     <?php
         $id = (int) $_GET["id"];
@@ -5,20 +15,20 @@
         $sql = "SELECT * FROM tblBook WHERE book_id = $id;";
         $result = mysqli_query($conn, $sql);
         $book = mysqli_fetch_assoc($result);
-
     ?>
     <main class="cont-center product">
         <div>
-            <img src="https://images.pexels.com/photos/5981927/pexels-photo-5981927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" srcset="">
+            <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
         </div>
         <div>
             <h1><?php echo $book['title']; ?></h1>
             <h2>R <?php echo $book['price']; ?></h2>
             <p><?php echo $book['description']; ?></p>
-            <div class="buttons">
-                <button>add to cart</button>
-                <button>message privately</button>
-            </div>
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="buttons">
+                <input type="hidden" value="<?php echo $book['book_id'] ?>" name="book_id" />
+                <input name="addToCart" type="submit" value="add to cart">
+                <input name="messagePrivately" type="submit" value="message privately">
+            </form>
             <div class="tags">
                 <p>isnb</p>
                 <p><?php echo $book['isbn']; ?></p>

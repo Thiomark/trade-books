@@ -26,7 +26,7 @@
         ?>
         <form class="auth_form" method="POST" action="server_logic/auth.server.php">
             <h1>Login</h1>
-            <input type="text" required name="username" placeholder="Username">
+            <input type="text" required name="username" placeholder="Username or student number">
             <input type="password" required name="password" placeholder="Password">
             <div>
                 <p>Don't have an account? <a href="register.php">Register</a></p>

@@ -11,20 +11,21 @@
             }
         }
         else if(isset($_GET["error"])) {
-            if($_GET["message"] == "bookAdded") {
+            if($_GET["error"] == "notApproved") {
                 echo "<div class=\"error\"><p>Book not added, not yet approved!</p></div>";
             }
         }; 
     ?>
     <?php if (empty($books)): ?>
-        <div class="books">
-            <p>There are no books yet, you can login get approval from the library to upload books</p>
+        <div class="no_books cont-center">
+            <p>No results found.</p>
+            <p>You can login or create an acount, get approval from the librarian to upload/sell textbooks</p>
         </div>
     <?php endif; ?>
     <main class="cards_wrapper">
         <?php foreach ($books as $item): ?>
             <div class="book_card">
-                <img src="https://images.pexels.com/photos/11431628/pexels-photo-11431628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
+                <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
                 <div>
                     <a href="product.php?id=<?= $item['book_id']; ?>"><?= $item['title']; ?></a>
                     <p>R <?php echo $item['price']; ?></p>

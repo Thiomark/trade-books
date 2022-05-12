@@ -8,17 +8,17 @@
                 <button>add image</button>
             </div>
             <label class="item_2" for="title">book title</label>
-            <input required class="item_4" name="title" value="The Maze Runner" type="text" >
+            <input required class="item_4" name="title" type="text" >
             <label class="item_3" for="isbn">book isbn</label>
-            <input required class="item_5" name="isbn" value="1234" type="text" >
+            <input required class="item_5" name="isbn" type="text" >
             <label class="item_6" for="description">description</label>
-            <textarea required class="item_7" name="description">book still in good condition</textarea>
+            <textarea required class="item_7" name="description"></textarea>
             <label class="item_8" for="category">category</label>
-            <input required class="item_11" name="category" value="programming" type="text" >
+            <input required class="item_11" name="category" type="text" >
             <label class="item_9" for="price">price</label>
-            <input required class="item_12" name="price" value="1000" type="text" >
+            <input required class="item_12" name="price" type="text" >
             <label class="item_10" for="shippingPrice">shipping price</label>
-            <input required class="item_13" for="shippingPrice" value="2" type="text" >
+            <input required class="item_13" for="shippingPrice" type="text" >
             <input class="item_14" type="submit" name="submit" value="upload book" >
         </form>
     </main>

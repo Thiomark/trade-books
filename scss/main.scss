@@ -675,10 +675,11 @@ footer {
             display: grid;
             grid-template-columns: auto auto;
             gap: .5em;
-            button {
+            input {
                 padding: .6em 3em;
                 border-radius: 2px;
                 font-size: .8rem;
+                text-align: center;
                 border: none;
                 background-color: rgb(40, 40, 40);
                 color: whitesmoke;
@@ -747,5 +748,16 @@ footer {
         text-align: center;
         font-size: .8rem;
         color: green;
+    }
+}
+
+.no_books {
+    p:first-child {
+        font-size: 2rem;
+        font-weight: 500;
+        
+    }
+    p {
+        text-align: center;
     }
 }

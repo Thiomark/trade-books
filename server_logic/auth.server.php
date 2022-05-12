@@ -1,4 +1,9 @@
 <?php
+
+    function authenticateUser(){
+        
+    }
+
     // Set vars to empty values
     $name = $username = $password = $student_number = $re_password = '';
     require_once '../config/database.php';
@@ -13,7 +18,7 @@
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
-            $gettingUser = mysqli_query($conn, "SELECT * FROM tblUser WHERE username = '$username';");
+            $gettingUser = mysqli_query($conn, "SELECT * FROM tblUser WHERE username = '$username' OR student_number = '$username';");
             
             if(mysqli_num_rows($gettingUser) > 0){
                 $row = mysqli_fetch_assoc($gettingUser);
@@ -25,6 +30,7 @@
                     $_SESSION["user_id"] = $row['user_id'];
                     $_SESSION["role"] = $row['role'];
                     $_SESSION["is_approved"] = $row['is_approved'];
+
                     header('Location: ../index.php');
                     exit();
                 }

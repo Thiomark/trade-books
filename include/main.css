@@ -723,10 +723,11 @@ footer > div > div a:not(:last-child) {
   gap: .5em;
 }
 
-.product div:nth-child(2) .buttons button {
+.product div:nth-child(2) .buttons input {
   padding: .6em 3em;
   border-radius: 2px;
   font-size: .8rem;
+  text-align: center;
   border: none;
   background-color: #282828;
   color: whitesmoke;
@@ -791,4 +792,13 @@ footer > div > div a:not(:last-child) {
   text-align: center;
   font-size: .8rem;
   color: green;
+}
+
+.no_books p:first-child {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.no_books p {
+  text-align: center;
 }

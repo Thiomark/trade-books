@@ -37,7 +37,7 @@
             }
         }
         else{
-            header('Location: ../login.php?redirect=addbook.php');
+            header('Location: ../login.php');
             exit();
         }
     }
