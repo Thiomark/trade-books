@@ -298,6 +298,7 @@ footer {
         }
         img {
             width: 15em;
+            height: 20em;
             border: 1px dashed rgb(238, 238, 238);
             padding: .6em;
             border-radius: 7px;
@@ -436,6 +437,9 @@ footer {
         .item_12 { grid-area: 7 / 2 / 8 / 3; }
         .item_13 { grid-area: 7 / 3 / 8 / 4; }
         .item_14 { grid-area: 8 / 1 / 9 / 2; }
+
+        .item_15 { grid-area: 2 / 3 / 3 / 4; }
+        .item_16 { grid-area: 3 / 3 / 4 / 4; }
     }
 }
 

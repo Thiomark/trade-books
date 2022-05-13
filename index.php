@@ -29,8 +29,9 @@
         <?php
             if(isset($_SESSION["user_id"])){
                 $id = $_SESSION["user_id"];
-                $sql = "SELECT * FROM tblUser WHERE user_id = $id;";
+                $sql = "SELECT * FROM tblUser WHERE user_id = 1";
                 $result = mysqli_query($conn, $sql);
+
                 $user = mysqli_fetch_assoc($result);
 
                 echo "<div class=\"user_info\">";
@@ -43,7 +44,7 @@
         ?>
         <?php foreach ($books as $item): ?>
             <div class="book_card">
-                <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
+                <img src="./server_logic/uploaded_images/<?= $item['image']; ?>" alt="" srcset="">
                 <div>
                     <a href="product.php?id=<?= $item['book_id']; ?>"><?= $item['title']; ?></a>
                     <p>R <?php echo $item['price']; ?></p>

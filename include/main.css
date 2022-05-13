@@ -298,6 +298,7 @@ footer > div > div a:not(:last-child) {
 
 .cards_wrapper .book_card img {
   width: 15em;
+  height: 20em;
   border: 1px dashed #eeeeee;
   padding: .6em;
   border-radius: 7px;
@@ -481,6 +482,14 @@ footer > div > div a:not(:last-child) {
 
 .add_book form .item_14 {
   grid-area: 8 / 1 / 9 / 2;
+}
+
+.add_book form .item_15 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.add_book form .item_16 {
+  grid-area: 3 / 3 / 4 / 4;
 }
 
 .cart div {

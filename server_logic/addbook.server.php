@@ -15,12 +15,13 @@
                 $category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 $shippingPrice = filter_input(INPUT_POST, 'shippingPrice', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                $imageName = filter_input(INPUT_POST, 'imageName', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
                 $userID = (int) $_SESSION["user_id"];
                 $num_price = (int) $price;
                 $num_shipping_price = (int) $shippingPrice;
     
-                $sql = "INSERT INTO tblBook (user_id, description, isbn, category, price, title, shipping_price, image) VALUES ($userID, '$description', '$isbn', '$category', $num_price, '$title', '$num_shipping_price', 'no image');";
+                $sql = "INSERT INTO tblBook (user_id, description, isbn, category, price, title, shipping_price, image) VALUES ($userID, '$description', '$isbn', '$category', $num_price, '$title', '$num_shipping_price', '$imageName');";
             
                 if(mysqli_query($conn, $sql)){
                     header('Location: ../index.php?message=bookAdded');

@@ -7,6 +7,10 @@
                 </div>
                 <button>add image</button>
             </div>
+
+            <label class="item_15" for="title">Image</label>
+            <input required class="item_16" name="imageName" type="text" >
+
             <label class="item_2" for="title">book title</label>
             <input required class="item_4" value="book1" name="title" type="text" >
             <label class="item_3" value="book2" for="isbn">book isbn</label>
