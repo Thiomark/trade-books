@@ -14,6 +14,9 @@
             if($_GET["error"] == "notApproved") {
                 echo "<div class=\"error\"><p>Book not added, not yet approved!</p></div>";
             }
+            else if($_GET["error"] == "bookNotAdded") {
+                echo "<div class=\"error\"><p>Book not added try again later...</p></div>";
+            }
         }; 
     ?>
     <?php if (empty($books)): ?>
@@ -23,6 +26,21 @@
         </div>
     <?php endif; ?>
     <main class="cards_wrapper">
+        <?php
+            if(isset($_SESSION["user_id"])){
+                $id = $_SESSION["user_id"];
+                $sql = "SELECT * FROM tblUser WHERE user_id = $id;";
+                $result = mysqli_query($conn, $sql);
+                $user = mysqli_fetch_assoc($result);
+
+                echo "<div class=\"user_info\">";
+                echo "<p><span>Username: </span>: " . $user['username'] . "</p>";
+                echo "<p><span>Role: </span>: " . $user['role'] . "</p>";
+                echo "<p><span>Name: </span>: " . $user['name'] . "</p>";
+                echo $user['is_approved'] == 1 ? "<p><span>Approved: </span>YES</p>" : "<p><span>Approved: </span>No</p>";
+                echo "</div>";
+            }
+        ?>
         <?php foreach ($books as $item): ?>
             <div class="book_card">
                 <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">

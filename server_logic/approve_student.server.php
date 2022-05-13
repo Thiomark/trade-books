@@ -1,5 +1,5 @@
 <?php 
-    require_once '../config/database.php';
+    require_once '../config/DBConn.php';
     if(isset($_GET["approve"])) {
 
         $id = (int) $_GET["approve"];

@@ -1,4 +1,4 @@
-<?php include './config/database.php'; ?>
+<?php include './config/DBConn.php'; ?>
 
 <?php 
     session_start();

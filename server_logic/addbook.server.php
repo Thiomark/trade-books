@@ -3,7 +3,7 @@
 ?>
 
 <?php 
-    require_once '../config/database.php';
+    require_once '../config/DBConn.php';
 
     if (isset($_POST['submit'])) {
         //checking if the user is approved or not
@@ -20,7 +20,7 @@
                 $num_price = (int) $price;
                 $num_shipping_price = (int) $shippingPrice;
     
-                $sql = "INSERT INTO tblBook (user_id, description, isbn, category, price, title, shipping_price) VALUES ($userID, '$description', '$isbn', '$category', $num_price, '$title', '$num_shipping_price');";
+                $sql = "INSERT INTO tblBook (user_id, description, isbn, category, price, title, shipping_price, image) VALUES ($userID, '$description', '$isbn', '$category', $num_price, '$title', '$num_shipping_price', 'no image');";
             
                 if(mysqli_query($conn, $sql)){
                     header('Location: ../index.php?message=bookAdded');

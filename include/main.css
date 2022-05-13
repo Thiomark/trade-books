@@ -269,6 +269,23 @@ footer > div > div a:not(:last-child) {
   padding: 2em 0;
 }
 
+.cards_wrapper .user_info {
+  position: fixed;
+  max-width: 15em;
+  top: 4.8em;
+  right: 1em;
+  padding: 1em;
+  border: 1px solid #ededed;
+}
+
+.cards_wrapper .user_info span {
+  font-weight: bold;
+}
+
+.cards_wrapper .user_info p {
+  font-size: .75rem;
+}
+
 .cards_wrapper .book_card {
   text-decoration: none;
   color: black;
@@ -299,7 +316,7 @@ footer > div > div a:not(:last-child) {
   padding: 2em 0;
 }
 
-.approve ul:not(:last-child) {
+.approve li:not(:last-child) {
   border-bottom: 1px solid #ededed;
 }
 
@@ -331,7 +348,7 @@ footer > div > div a:not(:last-child) {
   color: #4a4a4a;
 }
 
-.approve ul li button {
+.approve ul li a {
   background-color: green;
   padding: .4em 2em;
   border-radius: 4px;

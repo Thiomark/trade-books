@@ -271,6 +271,24 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2em 0;
+    
+    .user_info {
+        position: fixed;
+        max-width: 15em;
+        top: 4.8em;
+        right: 1em;
+        padding: 1em;
+        border: 1px solid $light-border;
+
+        span {
+            font-weight: bold;
+        }
+        
+        p {
+            font-size: .75rem;
+        }
+    }
+
     .book_card {
         text-decoration: none;
         color: black;
@@ -296,7 +314,7 @@ footer {
 .approve {
     @include max-width();
     padding: 2em 0;
-    ul:not(:last-child){
+    li:not(:last-child){
         border-bottom: 1px solid rgb(237, 237, 237);
     }
     .message {
@@ -325,7 +343,7 @@ footer {
                 }
             }
 
-            button {
+            a {
                 background-color: green;
                 padding: .4em 2em;
                 border-radius: 4px;
@@ -688,9 +706,7 @@ footer {
     }
 }
 
-
 .trackorder {
-    
     form {
         width: 100%;
         max-width: 600px;

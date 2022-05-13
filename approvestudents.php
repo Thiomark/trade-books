@@ -15,9 +15,8 @@
                 <li>
                     <div class="left">
                         <p><?php echo $item['student_number']; ?></p>
-                        <p><?php echo $item['name']; ?></p>
                         <p><?php echo date_format(date_create($item['created_on']), 'g:ia \o\n l jS F Y'); ?></p>
-                        <p></p>
+                        <p><?php echo $item['name']; ?></p>
                     </div>
                     <?php echo "<a href='server_logic/approve_student.server.php?approve=".$item['user_id']."'>approve</a>"; ?> 
                 </li>
