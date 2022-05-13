@@ -69,13 +69,12 @@ CREATE TABLE `tblUser` (
 -- Dumping data for table `tblUser`
 --
 
-INSERT INTO `tblUser` (`user_id`, `username`, `password`, `role`, `created_on`, `student_number`, `is_approved`, `name`) VALUES
-(1, 'itumeleng', '$2y$10$ERoBYMtWb1csHNJc2sjgQOngARKSa/hcrO3gruiaSo/Ad/5.jV0yG', 'student', '2022-05-12 07:33:15', 'ST10120001', 1, 'Itumeleng Doe'),
-(2, 'johnny', '$2y$10$ZqYFFLsK2j.PgQo8a86j9uSY9X8PKXX8OV.mEc2DaJk4YwMohGGBO', 'student', '2022-05-12 07:57:47', 'ST10120002', 0, 'John Doe'),
-(3, 'admin', '$2y$10$ZgrUwGnUSmCukXpI/8Q0CeEEVUJpgMA2gYnvxuw.t.79/oHVsn1ry', 'admin', '2022-05-12 07:58:26', 'admin', 1, 'admin'),
-(4, 'jean', '$2y$10$//43ZPinpVABncAS8W/iO.Iov79equBKkIuQFEPcyYL2WOJ7aP9G2', 'student', '2022-05-12 07:59:01', 'ST10120003', 0, 'Jean Doe'),
-(5, 'j_wick', '$2y$10$Du8iNlH9.gm2gMRgIjOWOOo9DGX2mgJJcY9g1E2Rf0G/WWjvwAjyi', 'student', '2022-05-12 08:00:12', 'ST10120004', 1, 'John Wick'),
-(6, 'ironman', '$2y$10$kXNdpKWzKBRZ1dsCW7hxOelpq8UWlhW7qR4LxrLC4nU4Fu4D8znM2', 'student', '2022-05-12 08:05:43', 'ST10120005', 1, 'Tony Stack');
+INSERT INTO `tblUser` (`username`, `password`, `role`, `student_number`, `name`) VALUES
+('itumeleng', '$2y$10$ERoBYMtWb1csHNJc2sjgQOngARKSa/hcrO3gruiaSo/Ad/5.jV0yG', 'student', 'ST10120001', 'Itumeleng Doe'),
+('johnny', '$2y$10$ZqYFFLsK2j.PgQo8a86j9uSY9X8PKXX8OV.mEc2DaJk4YwMohGGBO', 'student', 'ST10120002', 'John Doe'),
+('jean', '$2y$10$//43ZPinpVABncAS8W/iO.Iov79equBKkIuQFEPcyYL2WOJ7aP9G2', 'student', 'ST10120003', 'Jean Doe'),
+('j_wick', '$2y$10$Du8iNlH9.gm2gMRgIjOWOOo9DGX2mgJJcY9g1E2Rf0G/WWjvwAjyi', 'student', 'ST10120004', 'John Wick'),
+('ironman', '$2y$10$kXNdpKWzKBRZ1dsCW7hxOelpq8UWlhW7qR4LxrLC4nU4Fu4D8znM2', 'student', 'ST10120005', 'Tony Stack');
 
 --
 -- Indexes for dumped tables
