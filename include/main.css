@@ -8,6 +8,7 @@
 
 body {
   min-height: 100vh;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -20,6 +21,10 @@ body {
 
 .hidden {
   display: none;
+}
+
+.full_height {
+  min-height: 100vh;
 }
 
 header {
@@ -100,8 +105,6 @@ footer {
   background-color: #1c1c1d;
   padding: .6em 0;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 footer > div {
@@ -266,6 +269,7 @@ footer > div > div a:not(:last-child) {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
   padding: 2em 0;
 }
 
@@ -274,6 +278,7 @@ footer > div > div a:not(:last-child) {
   max-width: 15em;
   top: 4.8em;
   right: 1em;
+  background-color: aliceblue;
   padding: 1em;
   border: 1px solid #ededed;
 }

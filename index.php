@@ -1,8 +1,15 @@
 <?php include './include/header.php'; ?>
     <?php
-        $sql = "SELECT * FROM tblBook;";
-        $result = mysqli_query($conn, $sql);
-        $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $books = [];
+
+        //checking if the books table exist if it does we fetch from it
+        $istTblBookAvailable = mysqli_query($conn, 'select 1 from `tblBook` LIMIT 1');
+
+        if($istTblBookAvailable !== FALSE){
+            $sql = "SELECT * FROM tblBook;";
+            $result = mysqli_query($conn, $sql);
+            $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
     ?>
     <?php 
         if(isset($_GET["message"])) {

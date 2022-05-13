@@ -1,3 +1,4 @@
+    </div>
     <footer>
         <div>
             <a href="index.php">Trade Books</a>

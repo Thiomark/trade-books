@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 12, 2022 at 01:26 PM
+-- Generation Time: May 13, 2022 at 06:56 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -46,7 +46,11 @@ CREATE TABLE `tblBook` (
 --
 
 INSERT INTO `tblBook` (`book_id`, `title`, `image`, `user_id`, `description`, `isbn`, `category`, `price`, `is_available`, `created_on`, `shipping_price`) VALUES
-(1, 'Java', 'no image', 6, 'The book is still in good condition..', '12344321', 'Programing', '750', 1, '2022-05-12 10:15:26', '0');
+(1, 'Java', 'ctext.jpeg', 6, 'The book is still in good condition..', '12344321', 'Programing', '750', 1, '2022-05-12 10:15:26', '0'),
+(2, 'android', 'android.jpeg', 6, '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n            ', '00001', 'category1', '1000', 1, '2022-05-13 08:20:11', '0'),
+(3, 'c#', 'ctext.jpeg', 1, '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n            ', '00002', 'category1', '1000', 1, '2022-05-13 08:43:44', '0'),
+(4, 'kotlin', 'kotlin.jpeg', 1, '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n            ', '00003', 'category1', '1000', 1, '2022-05-13 08:45:07', '0'),
+(5, 'html', 'html.jpeg', 1, '                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n            ', '00005', 'category1', '1300', 1, '2022-05-13 08:45:39', '0');
 
 -- --------------------------------------------------------
 
@@ -69,12 +73,12 @@ CREATE TABLE `tblUser` (
 -- Dumping data for table `tblUser`
 --
 
-INSERT INTO `tblUser` (`username`, `password`, `role`, `student_number`, `name`) VALUES
-('itumeleng', '$2y$10$ERoBYMtWb1csHNJc2sjgQOngARKSa/hcrO3gruiaSo/Ad/5.jV0yG', 'student', 'ST10120001', 'Itumeleng Doe'),
-('johnny', '$2y$10$ZqYFFLsK2j.PgQo8a86j9uSY9X8PKXX8OV.mEc2DaJk4YwMohGGBO', 'student', 'ST10120002', 'John Doe'),
-('jean', '$2y$10$//43ZPinpVABncAS8W/iO.Iov79equBKkIuQFEPcyYL2WOJ7aP9G2', 'student', 'ST10120003', 'Jean Doe'),
-('j_wick', '$2y$10$Du8iNlH9.gm2gMRgIjOWOOo9DGX2mgJJcY9g1E2Rf0G/WWjvwAjyi', 'student', 'ST10120004', 'John Wick'),
-('ironman', '$2y$10$kXNdpKWzKBRZ1dsCW7hxOelpq8UWlhW7qR4LxrLC4nU4Fu4D8znM2', 'student', 'ST10120005', 'Tony Stack');
+INSERT INTO `tblUser` (`user_id`, `username`, `password`, `role`, `created_on`, `student_number`, `is_approved`, `name`) VALUES
+(1, 'itumeleng', '$2y$10$ERoBYMtWb1csHNJc2sjgQOngARKSa/hcrO3gruiaSo/Ad/5.jV0yG', 'student', '2022-05-13 06:38:59', 'ST10120001', 1, 'Itumeleng Doe'),
+(2, 'johnny', '$2y$10$ZqYFFLsK2j.PgQo8a86j9uSY9X8PKXX8OV.mEc2DaJk4YwMohGGBO', 'student', '2022-05-13 06:38:59', 'ST10120002', 0, 'John Doe'),
+(3, 'jean', '$2y$10$//43ZPinpVABncAS8W/iO.Iov79equBKkIuQFEPcyYL2WOJ7aP9G2', 'student', '2022-05-13 06:38:59', 'ST10120003', 0, 'Jean Doe'),
+(4, 'j_wick', '$2y$10$Du8iNlH9.gm2gMRgIjOWOOo9DGX2mgJJcY9g1E2Rf0G/WWjvwAjyi', 'student', '2022-05-13 06:38:59', 'ST10120004', 0, 'John Wick'),
+(5, 'ironman', '$2y$10$kXNdpKWzKBRZ1dsCW7hxOelpq8UWlhW7qR4LxrLC4nU4Fu4D8znM2', 'student', '2022-05-13 06:38:59', 'ST10120005', 0, 'Tony Stack');
 
 --
 -- Indexes for dumped tables
@@ -100,16 +104,15 @@ ALTER TABLE `tblUser`
 -- AUTO_INCREMENT for table `tblBook`
 --
 ALTER TABLE `tblBook`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tblUser`
 --
 ALTER TABLE `tblUser`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
