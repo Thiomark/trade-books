@@ -21,12 +21,12 @@
         ?>
         <form class="auth_form" method="POST" action="server_logic/auth.server.php"> 
             <h1>Create account</h1>
-            <input type="text" value="admin2" required name="name" placeholder="Full name">
-            <input type="text" value="admin2" required name="student_number" placeholder="Student number">
-            <input type="text" value="admin2" required name="username" placeholder="Username">
-            <input type="password" value="admin2" required name="password" placeholder="Password">
-            <input type="password" value="admin2" required name="re_password" placeholder="Repeat password">
-            <input type="password" value="admin321" name="admin_code" placeholder="admin code (skip if student)">
+            <input type="text" required name="name" placeholder="Full name">
+            <input type="text" required name="student_number" placeholder="Student number">
+            <input type="text" required name="username" placeholder="Username">
+            <input type="password" required name="password" placeholder="Password">
+            <input type="password" required name="re_password" placeholder="Repeat password">
+            <input type="password" name="admin_code" placeholder="admin code (skip if student)">
             <div>
                 <p>Have an account? <a href="login.php">Login</a></p>
             </div>
