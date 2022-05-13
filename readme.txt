@@ -1,13 +1,13 @@
+# First Step - before you do anything:  *NB
+    - create a database called bookstore (with all lowercase)
+    - add your information suchs as PORT, USER in the DBConn.php file (located in the config folder)
+    - run the createTable.php script which will create tblUser and tblBook tables and add dummy data
+
 # config folder containes all the configration of the application this like:
     - BDConn.php = which creates the connect web app and the database
     - createTable.php = which adds removes tblUser and tblBook and the re-adds them with database
     - userData = which contains dummy data for the users createTable
     - booksData = whcih contains dummy data for the books table 
-
-# First Step - before you do anything:  *NB
-    - create a database called bookstore (with all lowercase)
-    - add your information suchs as PORT, USER in the DBConn.php file (located in the config folder)
-    - run the createTable.php script which will create tblUser and tblBook tables and add dummy data
 
 # To create admin user: * NB   
     - register like how students register by going to the login.php url
