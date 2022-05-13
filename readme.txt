@@ -13,6 +13,15 @@
     - register like how students register by going to the login.php url
     - use the password "admin321"
 
+# to approve students:
+    - Only admins can approve users
+    - if you are an admin an "Office link" will show on the navigation which will show all the unapproved students 
+    - click on approve will make it possible for them to add books
+
+# How to add books;
+    - on the navigation section there is a "sell" option which is for selling books
+    - You must be approved first by the admin
+
 # Users can = login, register, add books (ONLY if approved)
 # Admin can = login, register, approve users, add books
 

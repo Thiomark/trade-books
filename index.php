@@ -11,6 +11,12 @@
             $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
         }
     ?>
+    <?php
+        if (isset($_POST['addToCart'])) {     
+            $msg = "product added to the cart";
+            echo "<script type='text/javascript'>alert('$msg');</script>";
+        }
+    ?>
     <?php 
         if(isset($_GET["message"])) {
             if($_GET["message"] == "bookAdded") {
@@ -52,6 +58,9 @@
         <?php foreach ($books as $item): ?>
             <div class="book_card">
                 <img src="./server_logic/uploaded_images/<?= $item['image']; ?>" alt="" srcset="">
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                    <input type="submit" name="addToCart" value="add to cart">
+                </form>
                 <div>
                     <a href="product.php?id=<?= $item['book_id']; ?>"><?= $item['title']; ?></a>
                     <p>R <?php echo $item['price']; ?></p>

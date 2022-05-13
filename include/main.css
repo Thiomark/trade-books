@@ -269,8 +269,20 @@ footer > div > div a:not(:last-child) {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1em;
+  gap: 1.5em;
   padding: 2em 0;
+}
+
+.cards_wrapper form {
+  width: 100%;
+}
+
+.cards_wrapper form input {
+  width: 100%;
+  padding: .8em;
+  border: none;
+  background-color: #4a4a4a;
+  color: aliceblue;
 }
 
 .cards_wrapper .user_info {
@@ -294,6 +306,13 @@ footer > div > div a:not(:last-child) {
 .cards_wrapper .book_card {
   text-decoration: none;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards_wrapper .book_card > div {
+  width: 100%;
 }
 
 .cards_wrapper .book_card a {
@@ -304,6 +323,7 @@ footer > div > div a:not(:last-child) {
 .cards_wrapper .book_card img {
   width: 15em;
   height: 20em;
+  margin: auto;
   border: 1px dashed #eeeeee;
   padding: .6em;
   border-radius: 7px;
