@@ -278,7 +278,7 @@ footer {
     gap: 1.5em;
     padding: 2em 0;
 
-    form {
+    #product-form {
         width: 100%;
         input {
             width: 100%;
@@ -292,6 +292,7 @@ footer {
     .user_info {
         position: fixed;
         max-width: 15em;
+        z-index: 999;
         top: 4.8em;
         right: 1em;
         background-color: aliceblue;
@@ -442,15 +443,9 @@ footer {
                 width: 4em;
             }
 
-            button {
-                margin-left: 2em;
-                padding: .9em 3em;
-                border-radius: 3px;
-                border: none;
-                background-color: rgb(32, 32, 32);
-                color: aliceblue;
+            input {
+                color: black;
                 font-size: .7rem;
-                font-weight: 500;
             }
         }
         .item_2 { grid-area: 2 / 1 / 3 / 2; }
@@ -844,6 +839,23 @@ footer {
     }
 }
 
+.books {
+    position: relative;
+
+    .delete-button {
+        position: absolute;
+        top: .6em;
+        left: .6em;
+        border: none;
+        background-color: whitesmoke;
+        box-shadow: 0 0 4px 2px gray;
+        color: black;
+        padding: .5em;
+        z-index: 70;
+        border-radius: 6px;
+    }
+}
+
 .no_books {
     p:first-child {
         font-size: 2rem;
@@ -852,5 +864,16 @@ footer {
     }
     p {
         text-align: center;
+    }
+}
+
+.alert {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 1em;
+
+    p {
+        padding: 1em;
     }
 }

@@ -9,7 +9,7 @@
     ?>
     <main class="cont-center product">
         <div>
-            <img src="https://images.pexels.com/photos/448835/pexels-photo-448835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" srcset="">
+            <img src="server_logic/uploaded_images/<?= $book['image']; ?>" alt="" srcset="">
         </div>
         <div>
             <h1><?php echo $book['title']; ?></h1>

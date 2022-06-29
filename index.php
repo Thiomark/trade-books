@@ -80,7 +80,7 @@
     <?php
         if(isset($_SESSION["user_id"])){
             $id = $_SESSION["user_id"];
-            $sql = "SELECT * FROM tblUser WHERE user_id = 1";
+            $sql = "SELECT * FROM tblUser WHERE user_id = $id";
             $result = mysqli_query($conn, $sql);
 
             $user = mysqli_fetch_assoc($result);
@@ -89,12 +89,12 @@
             echo "<p><span>Username: </span>: " . $user['username'] . "</p>";
             echo "<p><span>Role: </span>: " . $user['role'] . "</p>";
             echo "<p><span>Name: </span>: " . $user['name'] . "</p>";
-            echo $user['is_approved'] == true ? "<p><span>Approved: </span>YES</p>" : "<p><span>Approved: </span>No</p>";
+            echo $user['is_approved'] == 1 ? "<p><span>Approved: </span>YES</p>" : "<p><span>Approved: </span>No</p>";
             echo "</div>";
         }
     ?>
     <?php foreach ($books as $item): ?>
-        <form action="index.php?action=add&id=<?= $item['book_id']; ?>" method="POST" class="book_card">
+        <form id="product-form" action="product.php?id=<?= $item['book_id']; ?>" method="POST" class="book_card books">
             <img src="./server_logic/uploaded_images/<?= $item['image']; ?>" alt="" srcset="">
             <div>
                 <input type="hidden" name="hidden_title" value="<?php echo $item['title']; ?>" />
@@ -114,9 +114,14 @@
 <?php include './include/footer.php'; ?>
 
 <script type="text/JavaScript">
-    const productItem = document.querySelector(".books");
-    productItem?.addEventListener("click", () => {
-        window.location.href = "index.php";
+
+    const books = document.querySelectorAll(".books");
+
+    books.forEach(book => {
+        book?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            book.submit();
+        });
     });
 
 </script>
