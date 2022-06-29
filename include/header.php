@@ -5,7 +5,7 @@
 ?>
 
 <style>
-    <?php include "main.css" ?>
+    <?php include "css/main.css" ?>
 </style>
 
 <!DOCTYPE html>

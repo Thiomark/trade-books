@@ -1,0 +1,875 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.cont-center {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.full_height {
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+header > div {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header > div .buttons svg {
+  width: 1.7em;
+  height: 1.7em;
+  fill: rgb(74, 74, 74);
+}
+header > div > a {
+  font-size: 1.6rem;
+  color: rgb(60, 60, 60);
+  text-decoration: none;
+}
+header > div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.6em;
+}
+header > div div form {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.6em;
+  margin-right: 0.9em;
+}
+header > div div form input[type=submit] {
+  font-size: 0.8rem;
+  padding: 0.4em;
+  border-radius: 4px;
+  border: 1px solid rgb(237, 237, 237);
+  margin-right: -0.5em;
+  background-color: transparent;
+  background-color: rgb(231, 231, 231);
+}
+header > div div form input[type=text] {
+  width: 100%;
+  border: none;
+  padding: 0.6em 0;
+  margin-right: 1em;
+}
+header > div div form input[type=text]:focus {
+  outline: none;
+}
+header > div div form in button {
+  border: none;
+  background-color: transparent;
+}
+header > div div a {
+  font-size: 0.8rem;
+  margin-right: 0.9em;
+  color: rgb(74, 74, 74);
+}
+
+footer {
+  background-color: rgb(28, 28, 29);
+  padding: 0.6em 0;
+  width: 100%;
+}
+footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+footer > div > a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: aliceblue;
+}
+footer > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer > div > div a {
+  font-size: 0.8rem;
+  color: aliceblue;
+}
+footer > div > div a:not(:last-child) {
+  margin-right: 0.9em;
+}
+
+.contact_us_form {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 2em 0;
+}
+.contact_us_form h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.contact_us_form > p {
+  text-align: center;
+  margin-bottom: 1.6em;
+  font-size: 0.9rem;
+  color: rgb(93, 93, 93);
+}
+.contact_us_form .inputs {
+  padding: 2em 0;
+}
+.contact_us_form .inputs label {
+  font-size: 0.7rem;
+  color: rgb(42, 42, 42);
+}
+.contact_us_form .inputs textarea, .contact_us_form .inputs input[type=text] {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.6em;
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+}
+.contact_us_form .inputs input[type=button] {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.7em;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  background-color: rgb(46, 46, 46);
+  color: whitesmoke;
+}
+.contact_us_form .inputs .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 1em;
+}
+.contact_us_form .contact_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 2em;
+}
+.contact_us_form .contact_info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact_us_form .contact_info > div svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: rgb(74, 74, 74);
+}
+.contact_us_form .contact_info > div p {
+  margin-top: 0.8em;
+  color: rgb(74, 74, 74);
+}
+
+.auth_form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 2em 0;
+}
+.auth_form h1 {
+  text-align: center;
+  color: rgb(74, 74, 74);
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+.auth_form input {
+  width: 100%;
+}
+.auth_form input[type=text], .auth_form input[type=password] {
+  padding: 0.8em;
+  border-radius: 6px;
+  margin-bottom: 0.8em;
+  border: 1px solid rgb(214, 214, 214);
+}
+.auth_form > div {
+  background-color: rgb(238, 238, 238);
+  padding: 0.6em;
+  border-radius: 0.3em;
+}
+.auth_form > div p {
+  text-align: center;
+  font-size: 0.85rem;
+}
+.auth_form input[type=submit] {
+  padding: 0.9em;
+  font-size: 0.78rem;
+  background-color: rgb(39, 39, 39);
+  color: rgb(213, 213, 213);
+  text-transform: capitalize;
+  border: none;
+  border-radius: 4px;
+  margin-top: 0.9em;
+}
+
+.cards_wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5em;
+  padding: 2em 0;
+}
+.cards_wrapper form {
+  width: 100%;
+}
+.cards_wrapper form input {
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  background-color: rgb(74, 74, 74);
+  color: aliceblue;
+}
+.cards_wrapper .user_info {
+  position: fixed;
+  max-width: 15em;
+  top: 4.8em;
+  right: 1em;
+  background-color: aliceblue;
+  padding: 1em;
+  border: 1px solid rgb(237, 237, 237);
+}
+.cards_wrapper .user_info span {
+  font-weight: bold;
+}
+.cards_wrapper .user_info p {
+  font-size: 0.75rem;
+}
+.cards_wrapper .book_card {
+  padding: 0.6em;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px dashed rgb(238, 238, 238);
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cards_wrapper .book_card > div {
+  width: 100%;
+}
+.cards_wrapper .book_card a {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.cards_wrapper .book_card img {
+  width: 15em;
+  height: 20em;
+  margin: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 0.6em;
+  border-radius: 7px;
+  border-radius: 0.6px;
+  margin-bottom: 0.7em;
+}
+.cards_wrapper .book_card p {
+  font-size: 0.8rem;
+}
+
+.approve {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 0;
+}
+.approve li:not(:last-child) {
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.approve .message {
+  border: 1px solid rgb(237, 237, 237);
+  border-radius: 7px;
+  padding: 1em;
+}
+.approve .message p {
+  text-align: center;
+}
+.approve ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.6em 0;
+}
+.approve ul li .left {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1em;
+}
+.approve ul li .left p {
+  font-size: 0.8rem;
+  color: rgb(74, 74, 74);
+}
+.approve ul li a {
+  background-color: green;
+  padding: 0.4em 2em;
+  border-radius: 4px;
+  color: aliceblue;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.add_book {
+  padding: 2em 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+.add_book form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
+}
+.add_book form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(74, 74, 74);
+}
+.add_book form input[type=text], .add_book form textarea {
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 4px;
+  padding: 0.6em;
+}
+.add_book form textarea {
+  height: 8em;
+}
+.add_book form input[type=submit] {
+  background-color: rgb(0, 133, 33);
+  color: aliceblue;
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.7em 0;
+  border-radius: 0.3em;
+  margin-top: 2em;
+}
+.add_book form .item_1 {
+  padding: 1em;
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: 1/1/2/4;
+}
+.add_book form .item_1 div {
+  padding: 0.5em;
+  border: 1px dashed rgb(245, 172, 38);
+  border-radius: 4px;
+}
+.add_book form .item_1 img {
+  width: 4em;
+}
+.add_book form .item_1 button {
+  margin-left: 2em;
+  padding: 0.9em 3em;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(32, 32, 32);
+  color: aliceblue;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.add_book form .item_2 {
+  grid-area: 2/1/3/2;
+}
+.add_book form .item_3 {
+  grid-area: 2/2/3/3;
+}
+.add_book form .item_4 {
+  grid-area: 3/1/4/2;
+}
+.add_book form .item_5 {
+  grid-area: 3/2/4/3;
+}
+.add_book form .item_6 {
+  grid-area: 4/1/5/2;
+}
+.add_book form .item_7 {
+  grid-area: 5/1/6/4;
+}
+.add_book form .item_8 {
+  grid-area: 6/1/7/2;
+}
+.add_book form .item_9 {
+  grid-area: 6/2/7/3;
+}
+.add_book form .item_10 {
+  grid-area: 6/3/7/4;
+}
+.add_book form .item_11 {
+  grid-area: 7/1/8/2;
+}
+.add_book form .item_12 {
+  grid-area: 7/2/8/3;
+}
+.add_book form .item_13 {
+  grid-area: 7/3/8/4;
+}
+.add_book form .item_14 {
+  grid-area: 8/1/9/2;
+}
+.add_book form .item_15 {
+  grid-area: 2/3/3/4;
+}
+.add_book form .item_16 {
+  grid-area: 3/3/4/4;
+}
+
+.cart .empty_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart .empty_cart img {
+  margin: auto;
+}
+.cart .empty_cart a {
+  margin-top: 2em;
+  padding: 0.8em 2em;
+  border: none;
+  background-color: rgb(23, 23, 23);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: whitesmoke;
+}
+.cart table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.cart table a {
+  color: black;
+  cursor: pointer;
+}
+.cart table td, .cart table th {
+  border: 1px solid #ddd;
+  padding: 0.4em 1.2em;
+}
+.cart table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+.cart div {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr auto;
+}
+.cart ul {
+  margin-bottom: 2em;
+}
+.cart ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.cart ul li {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr auto;
+  padding: 0.8em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart ul li button {
+  border: none;
+  background-color: transparent;
+  padding: 0 1em;
+}
+.cart ul li button svg {
+  width: 2em;
+  height: 2em;
+}
+.cart ul li img {
+  height: 5em;
+}
+.cart form {
+  background-color: rgb(248, 248, 248);
+  padding: 2em;
+  border-radius: 7px;
+}
+.cart form h1 {
+  font-size: 1.2rem;
+  color: rgb(74, 74, 74);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.cart form div:not(:last-child) {
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.cart form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.7em 0;
+}
+.cart form div p {
+  font-size: 0.8rem;
+}
+.cart form div p:nth-child(1) {
+  color: rgb(163, 163, 163);
+}
+.cart form input {
+  border: none;
+  border-radius: 4px;
+  margin-top: 2em;
+  padding: 0.8em 5em;
+  background-color: rgb(35, 36, 43);
+  color: azure;
+  text-transform: uppercase;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 1em 0;
+}
+.messages > div:first-child {
+  background-color: rgb(231, 231, 231);
+  padding: 1.5em;
+}
+.messages > div:first-child li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.messages > div:first-child li a {
+  font-size: 0.9rem;
+  color: black;
+}
+.messages > div:first-child li p {
+  font-size: 0.8rem;
+  color: rgb(42, 42, 42);
+}
+.messages > div:last-child {
+  background-color: rgb(245, 245, 245);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.messages > div:last-child .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  padding: 0.6em 1.5em;
+  background-color: rgb(32, 32, 32);
+}
+.messages > div:last-child .header h1 {
+  font-size: 1rem;
+  color: rgb(74, 74, 74);
+  color: rgb(235, 235, 235);
+  font-weight: 400;
+}
+.messages > div:last-child .header p {
+  font-size: 0.8rem;
+  color: rgb(235, 235, 235);
+}
+.messages > div:last-child .body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.messages > div:last-child .body .chats {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.messages > div:last-child .body .chats > div:not(:last-child) {
+  margin-bottom: 0.8em;
+}
+.messages > div:last-child .body .chats > div:nth-child(odd) {
+  background-color: #b9f7a2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.messages > div:last-child .body .chats > div:nth-child(even) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: rgb(213, 239, 251);
+}
+.messages > div:last-child .body .chats > div {
+  padding: 0.6em;
+  border-radius: 7px;
+  width: 70%;
+}
+.messages > div:last-child .body .chats > div p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.messages > div:last-child .body .input {
+  background-color: rgb(231, 231, 231);
+  padding: 0.5em;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr auto;
+}
+.messages > div:last-child .body .input input[type=text] {
+  padding: 0.6em;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid rgb(191, 191, 191);
+}
+.messages > div:last-child .body .input input[type=submit] {
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 6px;
+  background-color: black;
+  color: whitesmoke;
+}
+.messages li {
+  list-style: none;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.product img {
+  width: 100%;
+  height: 60vh;
+}
+.product div:nth-child(2) {
+  padding: 1.5em;
+}
+.product div:nth-child(2) h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.product div:nth-child(2) h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0.8em 0;
+}
+.product div:nth-child(2) > p {
+  font-size: 0.9rem;
+  color: rgb(59, 59, 59);
+}
+.product div:nth-child(2) .tags {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2em;
+  border-top: 1px solid rgb(237, 237, 237);
+  padding: 1em 0;
+}
+.product div:nth-child(2) .tags p:nth-child(odd) {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.product div:nth-child(2) .tags p:nth-child(even) {
+  color: gray;
+}
+.product div:nth-child(2) .tags p {
+  color: rgb(74, 74, 74);
+  font-size: 0.8rem;
+}
+.product div:nth-child(2) .buttons {
+  padding: 1em 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5em;
+}
+.product div:nth-child(2) .buttons input {
+  padding: 0.6em 3em;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  border: none;
+  background-color: rgb(40, 40, 40);
+  color: whitesmoke;
+}
+
+.trackorder form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+}
+.trackorder form h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.7em;
+}
+.trackorder form p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.trackorder form input[type=text] {
+  width: 100%;
+  padding: 0.8em 0;
+  margin: 1em 0;
+  border: none;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.trackorder form input[type=submit] {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 3px;
+  background-color: rgb(19, 19, 19);
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.error {
+  border-radius: 7px;
+  padding: 0.4em;
+  border: 1px solid rgb(237, 237, 237);
+  margin: 0.4em;
+}
+.error p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.success {
+  border-radius: 7px;
+  padding: 0.4em;
+  border: 1px solid rgb(237, 237, 237);
+  margin: 0.4em;
+}
+.success p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: green;
+}
+
+.no_books p:first-child {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.no_books p {
+  text-align: center;
+}
