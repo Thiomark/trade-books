@@ -797,8 +797,8 @@ footer > div > div a:not(:last-child) {
   gap: 0.5em;
 }
 .product div:nth-child(2) .buttons input {
-  padding: 0.6em 3em;
-  border-radius: 2px;
+  padding: 1em 3em;
+  border-radius: 5px;
   font-size: 0.8rem;
   text-align: center;
   border: none;

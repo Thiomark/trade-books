@@ -11,50 +11,6 @@
         $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 ?>
-<?php
-    if (isset($_POST['addToCart'])) {     
-        // $msg = "product";
-        // echo "<script type='text/javascript'>alert('$msg');</script>";
-
-        if(isset($_SESSION["shopping_cart"])){
-            $item_array_id = array_column($_SESSION["shopping_cart"], "id");
-
-            if(!in_array($_GET["id"], $item_array_id))
-            {
-                $count = count($_SESSION["shopping_cart"]);
-                $item_array = array(
-                    'id' => $_GET["id"],
-                    'price' => $_POST["hidden_price"],
-                    'title' => $_POST["hidden_title"],
-                    'image' => $_POST["hidden_image"],
-                    'shipping_price' => $_POST["hidden_shipping_price"]
-                );
-                $_SESSION["shopping_cart"][$count] = $item_array;
-            }
-            // else {
-            //     foreach($_SESSION["shopping_cart"] as $keys => $values){
-            //         if($values["id"] == $_GET["id"])
-            //         {
-            //             unset($_SESSION["shopping_cart"][$keys]);
-            //             echo '<script>alert("Item Removed")</script>';
-            //             echo '<script>window.location="index.php"</script>';
-            //         }
-            //     }
-            // }
-        }else{
-            $item_array = array(
-                'id' => $_GET["id"],
-                'price' => $_POST["hidden_price"],
-                'title' => $_POST["hidden_title"],
-                'image' => $_POST["hidden_image"],
-                'shipping_price' => $_POST["hidden_shipping_price"]
-            );
-            $_SESSION["shopping_cart"][0] = $item_array;
-        }
-    }
-
-    
-?>
 <?php 
     if(isset($_GET["message"])) {
         if($_GET["message"] == "bookAdded") {
@@ -97,14 +53,7 @@
         <form id="product-form" action="product.php?id=<?= $item['book_id']; ?>" method="POST" class="book_card books">
             <img src="./server_logic/uploaded_images/<?= $item['image']; ?>" alt="" srcset="">
             <div>
-                <input type="hidden" name="hidden_title" value="<?php echo $item['title']; ?>" />
-                <input type="hidden" name="hidden_image" value="<?php echo $item['image']; ?>" />
-                <input type="hidden" name="hidden_price" value="<?php echo $item['price']; ?>" />
-                <input type="hidden" name="hidden_shipping_price" value="<?php echo $item['shipping_price']; ?>" />
-                <input type="submit" name="addToCart" value="add to cart">
-            </div>
-            <div>
-                <a href="product.php?id=<?= $item['book_id']; ?>"><?= $item['title']; ?></a>
+                <h4><?= $item['title']; ?></h4>
                 <p>R <?php echo $item['price']; ?></p>
                 <p><?php echo date_format(date_create($item['created_on']), 'g:ia \o\n l jS F Y'); ?></p>
             </div>
