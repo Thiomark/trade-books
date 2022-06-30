@@ -13,41 +13,48 @@
                 if(isset($_SESSION["shopping_cart"])){
                     $item_array_id = array_column($_SESSION["shopping_cart"], "id");
         
-                    if(!in_array($_GET["id"], $item_array_id))
-                    {
+                    if(!in_array($_GET["id"], $item_array_id)){
                         $count = count($_SESSION["shopping_cart"]);
                         $item_array = array(
                             'id' => $_GET["id"],
                             'price' => $_POST["hidden_price"],
                             'title' => $_POST["hidden_title"],
                             'image' => $_POST["hidden_image"],
-                            'shipping_price' => $_POST["hidden_shipping_price"]
+                            'quantity' => $_POST["quantity"]
                         );
                         $_SESSION["shopping_cart"][$count] = $item_array;
-                        // echo "<script type='text/javascript'>alert('$msg');</script>";
-                        $currentBook = 'product.php?id=' . $_GET['id'];
-                        echo "<script>window.location='$currentBook'</script>";
                     }
-                    // else {
-                    //     foreach($_SESSION["shopping_cart"] as $keys => $values){
-                    //         if($values["id"] == $_GET["id"])
-                    //         {
-                    //             unset($_SESSION["shopping_cart"][$keys]);
-                    //             echo '<script>alert("Item Removed")</script>';
-                    //             echo '<script>window.location="index.php"</script>';
-                    //         }
-                    //     }
-                    // }
+                    else {
+                        foreach($_SESSION["shopping_cart"] as $keys => $values){
+                            if($values["id"] == $_GET["id"]){
+                                unset($_SESSION["shopping_cart"][$keys]);
+                                echo $values["id"], $values["title"];
+
+                                $count = count($_SESSION["shopping_cart"]);
+                                $item_array = array(
+                                    'id' => $_GET["id"],
+                                    'price' => $values["price"],
+                                    'title' => $values["title"],
+                                    'image' => $values["image"],
+                                    'quantity' => $values["quantity"] + 1
+                                );
+                                $_SESSION["shopping_cart"][$count] = $item_array;
+                            }
+                        }
+                    }
                 }else{
                     $item_array = array(
                         'id' => $_GET["id"],
                         'price' => $_POST["hidden_price"],
                         'title' => $_POST["hidden_title"],
                         'image' => $_POST["hidden_image"],
-                        'shipping_price' => $_POST["hidden_shipping_price"]
+                        'quantity' => $_POST["quantity"]
                     );
                     $_SESSION["shopping_cart"][0] = $item_array;
                 }
+
+                $currentBook = 'product.php?id=' . $_GET['id'];
+                echo "<script>window.location='$currentBook'</script>";
             }  
         }
 
@@ -67,12 +74,15 @@
                 <input type="hidden" name="hidden_price" value="<?php echo $book['price']; ?>" />
                 <input type="hidden" name="hidden_shipping_price" value="<?php echo $book['shipping_price']; ?>" />
                 <input type="submit" name="addToCart" value="add to cart">
-
-                <!-- <input type="hidden" value="<?php echo $book['book_id'] ?>" name="book_id" /> -->
-
-                <!-- <input name="messagePrivately" type="submit" value="message privately"> -->
                 
-                <input name="checkout" style="background-color: green;" type="submit" value="proceed to checkout">
+                <?php 
+                    if(isset($_SESSION["shopping_cart"]) && count($_SESSION["shopping_cart"]) > 0){
+                        echo '<input name="checkout" style="background-color: green;" type="submit" value="proceed to checkout">';
+                    }else {
+                        echo '<input name="quantity" min="1" value="1" type="number">';
+                    }
+                ?>
+                
             </form>
             <div class="tags">
                 <p>isnb</p>

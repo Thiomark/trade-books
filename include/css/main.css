@@ -411,7 +411,7 @@ footer > div > div a:not(:last-child) {
   font-weight: 500;
   color: rgb(74, 74, 74);
 }
-.add_book form input[type=text], .add_book form textarea {
+.add_book form input[type=text], .add_book form textarea, .add_book form input[type=number] {
   border: 1px solid rgb(176, 176, 176);
   border-radius: 4px;
   padding: 0.6em;
@@ -797,10 +797,16 @@ footer > div > div a:not(:last-child) {
   gap: 0.5em;
 }
 .product div:nth-child(2) .buttons input {
-  padding: 1em 3em;
   border-radius: 5px;
   font-size: 0.8rem;
   text-align: center;
+  padding: 1em 3em;
+}
+.product div:nth-child(2) .buttons input[type=number] {
+  color: black;
+  border: 1px solid gray;
+}
+.product div:nth-child(2) .buttons input[type=submit] {
   border: none;
   background-color: rgb(40, 40, 40);
   color: whitesmoke;

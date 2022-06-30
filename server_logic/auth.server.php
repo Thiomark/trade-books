@@ -24,8 +24,14 @@
                 $_SESSION["role"] = $row['role'];                   // storing the role of the user, so we can show more resources on the website if the user is admin
                 $_SESSION["is_approved"] = $row['is_approved'];     // checking if the user was approved before they can upload a book
 
-                // Going to the home page
-                header('Location: ../index.php');
+                // Checking if there is a redirect if there is we go to that page if not we go the home page
+                if(isset($_GET["redirect"]) == 'checkout.server.php'){
+                    echo $_GET["redirect"];
+                    header("Location: ./" . $_GET["redirect"]);
+                }else{
+                    // Going to the home page
+                    header('Location: ../index.php');
+                }
                 exit();
             }
             else if ($checkPassword === false){

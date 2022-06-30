@@ -24,7 +24,7 @@
                 }
             }; 
         ?>
-        <form class="auth_form" method="POST" action="server_logic/auth.server.php">
+        <form class="auth_form" method="POST" action="<?php echo isset($_GET['redirect']) ? 'server_logic/auth.server.php?redirect=' . $_GET['redirect'] : 'server_logic/auth.server.php' ?> ">
             <h1>Login</h1>
             <input type="text" required name="username" placeholder="Username or student number">
             <input type="password" required name="password" placeholder="Password">

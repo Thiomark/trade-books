@@ -4,6 +4,8 @@
             <div class="item_1">
                 <input required type="file" name="upload">
             </div>
+            <label class="item_15" for="title">quantity</label>
+            <input required class="item_16" min="1" value="10" name="quantity" type="number">
             <label class="item_2" for="title">book title</label>
             <input value="something" required class="item_4" name="title" type="text" >
             <label class="item_3" value="book2" for="isbn">book isbn</label>

@@ -22,8 +22,10 @@
                 ?>
                 <table>
                     <tr>
-                        <th width="50%">Item Name</th>
+                        <th width="45%">Item Name</th>
+                        <th width="10%">Quantity</th>
                         <th width="20%">Price</th>
+                        <th width="20%">Total</th>
                         <th width="5%"></th>
                     </tr>
                     <?php
@@ -33,7 +35,9 @@
                                 ?>
                                     <tr>
                                         <td style="text-transform: capitalize;"><?php echo $values["title"]; ?></td>
+                                        <td><?php echo $values["quantity"]; ?></td>
                                         <td>R <?php echo number_format($values["price"], 2); ?></td>
+                                        <td>R <?php echo number_format($values["quantity"] * $values["price"], 2);?></td>
                                         <td>
                                             <a href="cart.php?action=delete&id=<?php echo $values["id"]; ?>">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
@@ -43,14 +47,14 @@
                                         </td>
                                     </tr>
                                 <?php
-                                $total = $total + $values["price"];
+                                $total = $total + ($values["quantity"] * $values["price"]);
                             }
                             ?>
                         <?php
                         }
                     ?>
                 </table>
-                <form style="margin-top: 2em;">
+                <form style="margin-top: 2em;" method="POST" action="server_logic/checkout.server.php">
                     <h1>Cart</h1>
                     <div>
                         <p>Total</p>

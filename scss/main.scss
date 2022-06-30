@@ -405,7 +405,7 @@ footer {
             color: $gray-1;
         }
 
-        input[type="text"], textarea {
+        input[type="text"], textarea, input[type="number"] {
             border: 1px solid rgb(176, 176, 176);
             border-radius: 4px;
             padding: .6em;
@@ -765,11 +765,20 @@ footer {
             display: grid;
             grid-template-columns: auto auto;
             gap: .5em;
+
             input {
-                padding: 1em 3em;
                 border-radius: 5px;
                 font-size: .8rem;
                 text-align: center;
+                padding: 1em 3em;
+            }
+
+            input[type="number"] {
+                color: black; 
+                border: 1px solid gray
+            }
+
+            input[type="submit"] {
                 border: none;
                 background-color: rgb(40, 40, 40);
                 color: whitesmoke;
