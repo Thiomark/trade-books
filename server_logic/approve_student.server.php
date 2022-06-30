@@ -1,12 +1,14 @@
 <?php 
     require_once '../config/DBConn.php';
-    if(isset($_GET["approve"])) {
+        //if( && $_SESSION['role'] == 'admin' && isset($_GET["id"])) {
+        if(isset($_GET["action"]) && isset($_SESSION["role"])) {
 
-        $id = (int) $_GET["approve"];
-        $sql = "UPDATE tblUser SET is_approved = '1' WHERE user_id = $id;";
+            // $id = (int) $_GET["id"];
+            // $sql = "UPDATE tblUser SET is_approved = " . $_GET["action"] == 'approve' ? 1 : 0 . " WHERE user_id = $id;";
+            // mysqli_query ($conn, $sql);
 
-        mysqli_query ($conn, $sql);
-    }; 
+            exit();
+        }
     
     header('Location: ../approvestudents.php');
     exit();

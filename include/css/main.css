@@ -796,7 +796,20 @@ footer > div > div a:not(:last-child) {
   grid-template-columns: auto auto;
   gap: 0.5em;
 }
-.product div:nth-child(2) .buttons input {
+.product div:nth-child(2) .buttons .checkout-btn {
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+}
+.product div:nth-child(2) .buttons input, .product div:nth-child(2) .buttons .checkout-btn {
   border-radius: 5px;
   font-size: 0.8rem;
   text-align: center;
@@ -900,4 +913,53 @@ footer > div > div a:not(:last-child) {
 }
 .alert p {
   padding: 1em;
+}
+
+.admin {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 2em;
+}
+.admin nav {
+  padding-bottom: 1em;
+  border-bottom: 1px dashed rgb(227, 227, 227);
+  margin-bottom: 2em;
+}
+.admin nav div {
+  display: inline;
+  margin: 0 1em;
+}
+.admin nav a {
+  font-size: 0.9rem;
+  color: rgb(65, 65, 65);
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 0.6em 3em;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.btn span {
+  color: aliceblue;
+}
+
+.btn-success {
+  background-color: green;
+}
+
+.btn-error {
+  background-color: red;
 }

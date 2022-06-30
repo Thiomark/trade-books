@@ -74,15 +74,15 @@
                 <input type="hidden" name="hidden_price" value="<?php echo $book['price']; ?>" />
                 <input type="hidden" name="hidden_shipping_price" value="<?php echo $book['shipping_price']; ?>" />
                 <input type="submit" name="addToCart" value="add to cart">
-                
                 <?php 
                     if(isset($_SESSION["shopping_cart"]) && count($_SESSION["shopping_cart"]) > 0){
-                        echo '<input name="checkout" style="background-color: green;" type="submit" value="proceed to checkout">';
+                        ?>
+                            <a href="server_logic/checkout.server.php" class='checkout-btn'>proceed to checkout</a>
+                        <?php
                     }else {
                         echo '<input name="quantity" min="1" value="1" type="number">';
                     }
                 ?>
-                
             </form>
             <div class="tags">
                 <p>isnb</p>

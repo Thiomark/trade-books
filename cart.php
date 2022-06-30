@@ -13,6 +13,9 @@
                     }
                 }
             }
+            else if($_GET["action"] == "deleteAll"){
+                unset($_SESSION["shopping_cart"]);
+            }
         }
     ?>
     <br />
@@ -54,6 +57,7 @@
                         }
                     ?>
                 </table>
+                <a href="cart.php?action=deleteAll" style="padding: .5em 2em; font-size: .9rem; margin-left: auto; border-radius: 5px; margin-top: 1em; background-color: red; color: white; display: inline-block;">Empty Cart</a>
                 <form style="margin-top: 2em;" method="POST" action="server_logic/checkout.server.php">
                     <h1>Cart</h1>
                     <div>
