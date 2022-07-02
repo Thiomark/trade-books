@@ -9,7 +9,7 @@
             $book = mysqli_fetch_assoc($result);
             
             if (isset($_POST['addToCart'])) {     
-        
+
                 if(isset($_SESSION["shopping_cart"])){
                     $item_array_id = array_column($_SESSION["shopping_cart"], "id");
         
@@ -28,7 +28,6 @@
                         foreach($_SESSION["shopping_cart"] as $keys => $values){
                             if($values["id"] == $_GET["id"]){
                                 unset($_SESSION["shopping_cart"][$keys]);
-                                echo $values["id"], $values["title"];
 
                                 $count = count($_SESSION["shopping_cart"]);
                                 $item_array = array(
@@ -42,6 +41,9 @@
                             }
                         }
                     }
+
+                    $currentBook = 'product.php?id=' . $_GET['id'];
+                    echo "<script>window.location='$currentBook'</script>";
                 }else{
                     $item_array = array(
                         'id' => $_GET["id"],

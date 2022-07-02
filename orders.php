@@ -12,6 +12,8 @@
                 $result = mysqli_query($conn, $sql);
                 $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+                $ordersAmountSummary = 0; 
+
                 if(isset($_GET["action"]) && isset($_GET["id"]) && $_SESSION["role"] == 'admin'){
                     $order_id = $_GET["id"];
 
@@ -61,7 +63,9 @@
                     }
                 ?>
             </tr>
-            <?php foreach ($orders as $item): ?>
+            <?php foreach ($orders as $item): 
+                $ordersAmountSummary = $ordersAmountSummary + $item['price'];
+                ?>
                 <tr>
                     <td><?php echo $item["order_number"]; ?></td>
                     <td><?php echo date_format(date_create($item['created_on']), 'g:ia \o\n l jS F Y'); ?></td>
@@ -83,6 +87,17 @@
                     ?>
                 </tr>
             <?php endforeach; ?>
+            <tr>
+                
+                <td colspan="<?php echo $_SESSION["role"] == 'admin' ? '3' : '2' ?>">Total</td>
+                <td>R <?php echo number_format($ordersAmountSummary, 2); ?></td>
+                <td></td>
+                <?php 
+                    if($_SESSION["role"] == 'admin'){
+                        echo '<td></td>';
+                    }
+                ?>
+            </tr>
         </table>
     </main>
 <?php include './include/footer.php'; ?>

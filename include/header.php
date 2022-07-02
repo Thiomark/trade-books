@@ -34,14 +34,13 @@
                     <?php 
                         if(isset($_SESSION["user_id"])){
                             echo "<a href='server_logic/logout.server.php'>Logout</a>";
-                            if($_SESSION["role"] != 'admin') {
-                                echo "<a href='orders.php'>Orders</a>";
-                            }
+                            echo "<a href='orders.php'>Orders</a>";
                         }
                         else{
                             echo "<a href='login.php'>Sign In</a>";
                         }
                     ?>
+                    <a href='admin.php'>Admin</a>
                     <a class="buttons" href="messages.php">Messages</a>
                     <a class="buttons" style="position: relative;" href="cart.php">      
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-right: .8em;" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">

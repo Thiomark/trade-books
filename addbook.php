@@ -11,7 +11,7 @@
             <label class="item_3" value="book2" for="isbn">book isbn</label>
             <input required class="item_5" name="isbn" type="text" >
             <label class="item_6" for="description">description</label>
-            <textarea required class="item_7" name="description">About something!</textarea>
+            <textarea required class="item_7" name="description"></textarea>
             <label class="item_8" for="category">category</label>
             <input required class="item_11" name="category" type="text" >
             <label class="item_9" for="price">price</label>
