@@ -28,10 +28,11 @@ body {
   min-height: 100vh;
 }
 
-header {
-  border-bottom: 1px solid rgb(229, 229, 229);
+header nav a {
+  font-size: .8rem;
 }
-header > div {
+
+/* header > div:nth-child(2) {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -99,11 +100,11 @@ header > div div form in button {
   border: none;
   background-color: transparent;
 }
-header > div div a {
+header > div:nth-child(2) div a {
   font-size: 0.8rem;
   margin-right: 0.9em;
   color: rgb(74, 74, 74);
-}
+} */
 
 footer {
   background-color: rgb(28, 28, 29);

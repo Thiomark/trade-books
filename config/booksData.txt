@@ -1,6 +1,14 @@
 INSERT INTO `tblBook` (`title`, `image`, `user_id`, `description`, `isbn`, `category`, `price`, `is_available`, `shipping_price`) VALUES
-('Java', 'ctext.jpeg', 6, 'The book is still in good condition..', '12344321', 'Programing', '750', 1, '0'),
-('android', 'android.jpeg', 6, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00001', 'category1', '1000', 1, '0'),
-('c#', 'ctext.jpeg', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00002', 'category1', '1000', 1, '0'),
-('kotlin', 'kotlin.jpeg', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00003', 'category1', '1000', 1, '0'),
-('html', 'html.jpeg', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00005', 'category1', '1300', 1, '0');
+('Java', '3.jpeg', 6, 'The book is still in good condition..', '12344321', 'Programing', '750', 1, '0'),
+('android', '2.jpeg', 6, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00001', 'category1', '1000', 1, '0'),
+('c#', '4.png', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00002', 'category1', '1000', 1, '0'),
+('kotlin', '3.jpeg', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00003', 'category1', '1000', 1, '0'),
+('html', '5.jpeg', 2, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00005', 'category1', '1300', 1, '0'),
+('html', '6.jpeg', 5, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00006', 'category1', '300', 1, '0'),
+('html', '2.jpeg', 3, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00007', 'category1', '100', 1, '0'),
+('html', '1.jpeg', 1, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00008', 'category1', '1100', 1, '0'),
+('html', '3.jpeg', 4, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '00009', 'category1', '700', 1, '0'),
+('html', '5.jpeg', 4, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '000010', 'category1', '600', 1, '0'),
+('html', '4.png', 4, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '000012', 'category1', '1300', 1, '0'),
+('html', '6.jpeg', 4, 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid at blanditiis magnam atque itaque.\r\n', '000012', 'category1', '1300', 1, '0');
+

@@ -56,8 +56,8 @@
                 </li>
             <?php endforeach; ?>
         </ul>
-        <ul>
-            <h3>All Students</h3>
+        <ul class="mt-10 pt-3 border-gray-200 border-t">
+            <h3 class=''>All Students</h3>
             <?php foreach ($allstudents as $item): ?>
                 <li>
                     <div class="left">

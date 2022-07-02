@@ -52,10 +52,10 @@
     <?php foreach ($books as $item): ?>
         <form id="product-form" action="product.php?id=<?= $item['book_id']; ?>" method="POST" class="book_card books">
             <img src="./server_logic/uploaded_images/<?= $item['image']; ?>" alt="" srcset="">
-            <div>
-                <h4><?= $item['title']; ?></h4>
-                <p>R <?php echo $item['price']; ?></p>
-                <p><?php echo date_format(date_create($item['created_on']), 'g:ia \o\n l jS F Y'); ?></p>
+            <div class="px-3">
+                <h3><?= $item['title']; ?></h3>
+                <p class="text-gray-500">R <?php echo $item['price']; ?></p>
+                <p><?php /*echo date_format(date_create($item['created_on']), 'g:ia \o\n l jS F Y');*/ ?></p>
             </div>
         </form>
     <?php endforeach; ?>
