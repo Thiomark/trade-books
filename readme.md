@@ -42,7 +42,7 @@
 # Application Structure:
 <ins><strong>config folder</strong></ins> - conatins configration for the application </br>
 <ins><strong>server_login </strong></ins> - conatins server code for authetication, logout, approving students, adding books and images folder:
-
+![thumbnail](https://res.cloudinary.com/thiomark/image/upload/v1672769990/Trade_Books_-_Thumbnail_ly8xm3.png)
 ![desktop-home](https://res.cloudinary.com/thiomark/image/upload/v1657357601/large_tradebooks_home_8f10cc1378.png)
 ![approve-students](https://res.cloudinary.com/thiomark/image/upload/v1657357597/large_tradebooks_admin2_dc17534399.png)
 ![login](https://res.cloudinary.com/thiomark/image/upload/v1657357596/tradebooks_login_a2a8577841.png)
